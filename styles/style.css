@@ -53,9 +53,10 @@ header {
 
 #banner {
     padding: 0;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
-    max-width: 800px;
+    max-width: 890px;
+    height: 475px;
     width: 100%;
     overflow: hidden;
 }
