@@ -29,17 +29,30 @@
                 </div>
                 <div class="right-side">
                     <form id="consult-form">
-                        <label for="age">How old are you?</label>
-                        <input type="text" id="age" name="age" required><br><br>
-    
-                        <p>Do you expect to be out of work for at least a year due to your health?</p>
-                        <input type="radio" id="yes" name="out-of-work" value="yes" required>
-                        <label for="yes">Yes</label><br>
-                        <input type="radio" id="no" name="out-of-work" value="no" required>
-                        <label for="no">No</label><br><br>
-    
+                        <label for="age">1. How old are you?</label>
+                        <select id="age" name="age" required>
+                            <option value="" disabled selected>Select an answer</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                        </select>
+                    
+                        <p>2. Do you expect to be out of work for at least a year due to your health?</p>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="yes" name="out-of-work" value="yes" required>
+                                <label for="yes">Yes</label>
+                            </div>
+                        
+                            <div class="radio-item">
+                                <input type="radio" id="no" name="out-of-work" value="no" required>
+                                <label for="no">No</label>
+                            </div>
+                        </div>
+                        <br><br>
+                    
                         <button type="submit" id="next-step-btn">Next Step</button>
-                    </form>
+                    </form>                    
                 </div>
             </div>
         </section>
