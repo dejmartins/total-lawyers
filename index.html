@@ -16,10 +16,30 @@
     <main>
         <section id="form-container">
             <div id="banner">
-                <p>Main Content.</p>
+                <div class="left-side">
+                    <h3>Get a 100% Free Consult for Up to $3,822/Month in Disability Benefits</h3>
+                    <div id="demarcation"></div>
+                    <p>Answer a few questions to get started.</p>
+                    <p>Join over 1M+ others who chose us to connect with a lawyer — for free.</p>
+                </div>
+                <div class="right-side">
+                    <form id="consult-form">
+                        <label for="age">How old are you?</label>
+                        <input type="text" id="age" name="age" required><br><br>
+    
+                        <p>Do you expect to be out of work for at least a year due to your health?</p>
+                        <input type="radio" id="yes" name="out-of-work" value="yes" required>
+                        <label for="yes">Yes</label><br>
+                        <input type="radio" id="no" name="out-of-work" value="no" required>
+                        <label for="no">No</label><br><br>
+    
+                        <button type="submit" id="next-step-btn">Next Step</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
+    
 
     <footer>
         <p>&copy; 2024 MH Sub I, LLC dba Nolo</p>
