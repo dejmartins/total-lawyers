@@ -119,21 +119,21 @@
                         <div class="form-section" id="section-5" style="display: none;">
                             <p class="centered-text">We found 1 SSDI lawyer in your area!</p>
                         
-                            <label for="full-name">What’s your full name?</label>
+                            <label for="full-name">What's your full name?</label>
                             <div class="name-fields">
                                 <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
                                 <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
                             </div>
                         
-                            <label for="telephone-number">What’s your telephone number?</label>
+                            <label for="telephone-number">What's your telephone number?</label>
                             <input type="tel" id="telephone-number" name="telephone-number" required>
                         
-                            <label for="email-address">What’s your email address?</label>
+                            <label for="email-address">What's your email address?</label>
                             <input type="email" id="email-address" name="email-address" required>
                         </div>
                         
                     
-                        <button type="submit" id="next-step-btn" onclick="showNextSection()">Next Step</button>
+                        <button type="submit" id="next-step-btn" onclick="showNextSectionWithValidation()">Next Step</button>
 
                         <div id="caution" style="display: none;">
                             <p>You should not send any sensitive or confidential information through this site. Any information sent through this site does not create an attorney-client relationship and may not be treated as privileged or confidential. The lawyer or law firm you are contacting is not required to, and may choose not to, accept you as a client. The Internet is not necessarily secure and emails sent through this site could be intercepted or read by third parties.</p>

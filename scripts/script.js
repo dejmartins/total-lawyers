@@ -1,20 +1,39 @@
 let currentSection = 1;
+const totalSections = 5;
 const caution = document.getElementById('caution');
 const termsOfUse = document.getElementById('terms-of-use');
 
-function showNextSection() {
-    const totalSections = 5;
-    
+function validateCurrentSection() {
+    const currentFormSection = document.getElementById(`section-${currentSection}`);
+    const inputs = currentFormSection.querySelectorAll('input, select, textarea');
+    let isValid = true;
+
+    inputs.forEach(input => {
+        if (!input.checkValidity()) {
+            isValid = false;
+            input.classList.add('invalid');
+        } else {
+            input.classList.remove('invalid');
+        }
+    });
+
+    return isValid;
+}
+
+function hideCurrentSection() {
+    document.getElementById(`section-${currentSection}`).style.display = 'none';
     caution.style.display = 'none';
     termsOfUse.style.display = 'none';
-    document.getElementById(`section-${currentSection}`).style.display = 'none';
+}
 
+function showNextSection() {
     currentSection++;
-
     if (currentSection <= totalSections) {
         document.getElementById(`section-${currentSection}`).style.display = 'block';
     }
+}
 
+function updateButtonState() {
     const nextStepBtn = document.getElementById('next-step-btn');
     
     if (currentSection === totalSections - 1) {
@@ -27,4 +46,14 @@ function showNextSection() {
     } else if (currentSection > totalSections) {
         location.reload();
     }
+}
+
+function showNextSectionWithValidation() {
+    if (!validateCurrentSection()) {
+        alert('Please fill out all required fields before proceeding.');
+        return;
+    }
+    hideCurrentSection();
+    showNextSection();
+    updateButtonState();
 }
