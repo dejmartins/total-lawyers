@@ -23,5 +23,8 @@ function showNextSection() {
     } else if (currentSection === totalSections) {
         termsOfUse.style.display = 'block';
         nextStepBtn.textContent = 'Get Free Consult';
+        nextStepBtn.type = 'submit';
+    } else if (currentSection > totalSections) {
+        location.reload();
     }
 }
