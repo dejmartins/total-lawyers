@@ -176,7 +176,7 @@ header {
 
 .radio-group {
     display: flex;
-    gap: 20px; 
+    gap: 16px; 
     width: 100%;
 }
 
