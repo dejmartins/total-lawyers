@@ -170,7 +170,7 @@ header {
 #consult-form label + div,
 #consult-form label + textarea,
 #consult-form p + .radio-group {
-    margin-top: 8px;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
@@ -246,13 +246,19 @@ header {
     background-color: #f79721;
 }
 
-#caution p {
+#caution p, #terms-of-use p {
     color: #8F8F8F;
     font-size: 12px;
     font-weight: 400;
     line-height: 14.1px;
     text-align: justify;
     box-sizing: border-box;
+}
+
+span {
+    color: #006FBB;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .centered-text {

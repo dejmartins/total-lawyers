@@ -1,11 +1,13 @@
 let currentSection = 1;
 const caution = document.getElementById('caution');
+const termsOfUse = document.getElementById('terms-of-use');
 
 function showNextSection() {
     const totalSections = 5;
     
-    document.getElementById(`section-${currentSection}`).style.display = 'none';
     caution.style.display = 'none';
+    termsOfUse.style.display = 'none';
+    document.getElementById(`section-${currentSection}`).style.display = 'none';
 
     currentSection++;
 
@@ -16,9 +18,10 @@ function showNextSection() {
     const nextStepBtn = document.getElementById('next-step-btn');
     
     if (currentSection === totalSections - 1) {
+        caution.style.display = 'block';
         nextStepBtn.textContent = 'Last Step';
-        caution.style.display = 'block'
     } else if (currentSection === totalSections) {
+        termsOfUse.style.display = 'block';
         nextStepBtn.textContent = 'Get Free Consult';
     }
 }
