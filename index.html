@@ -107,9 +107,20 @@
                                 </div>
                             </div>
                         </div>
-                        <br><br>
+
+                        <div class="form-section" id="section-4" style="display: none;">
+                            <label for="zip-code">7. What’s your zip code?</label>
+                            <input type="text" id="zip-code" name="zip-code" required>
+                        
+                            <label for="health-conditions">8. Please briefly list the health conditions that prevent you from working.</label>
+                            <textarea id="health-conditions" name="health-conditions" required rows="10" cols="50"></textarea>
+                        </div>
                     
                         <button type="submit" id="next-step-btn" onclick="showNextSection()">Next Step</button>
+
+                        <div id="caution" style="display: none;">
+                            <p>You should not send any sensitive or confidential information through this site. Any information sent through this site does not create an attorney-client relationship and may not be treated as privileged or confidential. The lawyer or law firm you are contacting is not required to, and may choose not to, accept you as a client. The Internet is not necessarily secure and emails sent through this site could be intercepted or read by third parties.</p>
+                        </div>
                     </form>                    
                 </div>
             </div>
