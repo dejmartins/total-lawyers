@@ -29,29 +29,59 @@
                 </div>
                 <div class="right-side">
                     <form id="consult-form">
-                        <label for="age">1. How old are you?</label>
-                        <select id="age" name="age" required>
-                            <option value="" disabled selected>Select an answer</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                        </select>
-                    
-                        <p>2. Do you expect to be out of work for at least a year due to your health?</p>
-                        <div class="radio-group">
-                            <div class="radio-item">
-                                <input type="radio" id="yes" name="out-of-work" value="yes" required>
-                                <label for="yes">Yes</label>
-                            </div>
+                        <div class="form-section" id="section-1">
+                            <label for="age">1. How old are you?</label>
+                            <select id="age" name="age" required>
+                                <option value="" disabled selected>Select an answer</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                            </select>
                         
-                            <div class="radio-item">
-                                <input type="radio" id="no" name="out-of-work" value="no" required>
-                                <label for="no">No</label>
+                            <p>2. Do you expect to be out of work for at least a year due to your health?</p>
+                            <div class="radio-group">
+                                <div class="radio-item">
+                                    <input type="radio" id="yes" name="out-of-work" value="yes" required>
+                                    <label for="yes">Yes</label>
+                                </div>
+                            
+                                <div class="radio-item">
+                                    <input type="radio" id="no" name="out-of-work" value="no" required>
+                                    <label for="no">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section" id="section-2" style="display: none;">
+                            <p>3. Have you been treated by a doctor, hospital, or clinic in the last year?</p>
+                            <div class="radio-group">
+                                <div class="radio-item">
+                                    <input type="radio" id="yes" name="treated-by-doctor" value="yes" required>
+                                    <label for="yes">Yes</label>
+                                </div>
+                            
+                                <div class="radio-item">
+                                    <input type="radio" id="no" name="treated-by-doctor" value="no" required>
+                                    <label for="no">No</label>
+                                </div>
+                            </div>
+                
+                            <p>4. Have you had a full time job within the past 5 years?</p>
+                            <div class="radio-group">
+                                <div class="radio-item">
+                                    <input type="radio" id="yes" name="full-time-job" value="yes" required>
+                                    <label for="yes">Yes</label>
+                                </div>
+                            
+                                <div class="radio-item">
+                                    <input type="radio" id="no" name="full-time-job" value="no" required>
+                                    <label for="no">No</label>
+                                </div>
                             </div>
                         </div>
                         <br><br>
                     
-                        <button type="submit" id="next-step-btn">Next Step</button>
+                        <button type="submit" id="next-step-btn" onclick="showNextSection()">Next Step</button>
                     </form>                    
                 </div>
             </div>
