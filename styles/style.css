@@ -129,6 +129,7 @@ header {
     color: #333333;
     width: 100%;
     box-sizing: border-box;
+    outline: #006FBB;
 }
 
 #consult-form select:focus {
@@ -154,25 +155,17 @@ header {
     color: #333333;
 }
 
-#consult-form input[type="text"],
-#consult-form select {
-    margin-bottom: 10px;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
+#consult-form input[type="text"] {
+    padding: 12px 16px;
+    border-radius: 5px;
+    border: 2px solid #E1E1E1;
     width: 100%;
     box-sizing: border-box;
 }
 
-#section-4 input[type="text"] {
-    padding: 12px 16px;
-    border: 2px solid #E1E1E1;
-    border-radius: 5px;
-}
-
 #consult-form label + select,
-#consult-form label + input[type="text"],
+#consult-form label + input,
+#consult-form label + div,
 #consult-form label + textarea,
 #consult-form p + .radio-group {
     margin-top: 8px;
@@ -196,7 +189,7 @@ header {
 }
 
 .radio-item input {
-    margin-bottom: 7px;
+    margin-bottom: 9px;
 }
 
 .radio-item input[type="radio"] {
@@ -258,6 +251,26 @@ header {
     line-height: 14.1px;
     text-align: justify;
     box-sizing: border-box;
+}
+
+.centered-text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.8px;
+    color: #272727;
+    padding-bottom: 20px;
+}
+
+.name-fields {
+    display: flex;
+    gap: 16px;
+}
+
+.name-fields input[type="text"]::placeholder {
+    color: #8F8F8F;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 footer {

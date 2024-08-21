@@ -115,6 +115,23 @@
                             <label for="health-conditions">8. Please briefly list the health conditions that prevent you from working.</label>
                             <textarea id="health-conditions" name="health-conditions" required rows="10" cols="50"></textarea>
                         </div>
+
+                        <div class="form-section" id="section-5" style="display: none;">
+                            <p class="centered-text">We found 1 SSDI lawyer in your area!</p>
+                        
+                            <label for="full-name">What’s your full name?</label>
+                            <div class="name-fields">
+                                <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                                <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                            </div>
+                        
+                            <label for="telephone-number">What’s your telephone number?</label>
+                            <input type="tel" id="telephone-number" name="telephone-number" required>
+                        
+                            <label for="email-address">What’s your email address?</label>
+                            <input type="email" id="email-address" name="email-address" required>
+                        </div>
+                        
                     
                         <button type="submit" id="next-step-btn" onclick="showNextSection()">Next Step</button>
 
