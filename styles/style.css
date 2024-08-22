@@ -24,9 +24,9 @@ main {
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 0; */
     width: 100%;
     background-color: transparent;
     padding: 10px 0; 
@@ -47,7 +47,7 @@ header {
     align-items: center;
     min-height: 70vh;
     padding: 20px;
-    margin-top: 120px;
+    /* margin-top: 120px; */
     margin-bottom: 90px;
 }
 
