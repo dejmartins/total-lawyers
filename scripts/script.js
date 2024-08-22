@@ -57,10 +57,10 @@ function updateButtonState() {
 }
 
 function showNextSectionWithValidation() {
-    // if (!validateCurrentSection()) {
-    //     alert('Please fill out all required fields before proceeding.');
-    //     return;
-    // }
+    if (!validateCurrentSection()) {
+        alert('Please fill out all required fields before proceeding.');
+        return;
+    }
     hideCurrentSection();
     showNextSection();
     updateButtonState();
