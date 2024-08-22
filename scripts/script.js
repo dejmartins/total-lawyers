@@ -30,8 +30,16 @@ function showNextSection() {
     currentSection++;
     if (currentSection <= totalSections) {
         document.getElementById(`section-${currentSection}`).style.display = 'block';
+
+        const instruction = document.getElementById('instruction');
+        if (currentSection === 5) {
+            instruction.textContent = "Enter your details for a free consult.";
+        } else {
+            instruction.textContent = "Answer a few questions and continue.";
+        }
     }
 }
+
 
 function updateButtonState() {
     const nextStepBtn = document.getElementById('next-step-btn');
