@@ -49,11 +49,27 @@ function updateButtonState() {
 }
 
 function showNextSectionWithValidation() {
-    if (!validateCurrentSection()) {
-        alert('Please fill out all required fields before proceeding.');
-        return;
-    }
+    // if (!validateCurrentSection()) {
+    //     alert('Please fill out all required fields before proceeding.');
+    //     return;
+    // }
     hideCurrentSection();
     showNextSection();
     updateButtonState();
 }
+
+function moveFormForMobile() {
+    const form = document.querySelector('.right-side');
+    const leftSide = document.querySelector('.left-side');
+
+    if (window.innerWidth <= 768) {
+        leftSide.insertBefore(form, leftSide.getElementsByTagName('p')[1]);
+    } else {
+        const banner = document.getElementById('banner');
+        banner.appendChild(form);
+    }
+}
+
+window.addEventListener('resize', moveFormForMobile);
+window.addEventListener('load', moveFormForMobile);
+
